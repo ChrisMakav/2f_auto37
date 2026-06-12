@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Eye, Award, MapPin, Calendar, Star, Car } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -72,23 +73,16 @@ export default function AProposPage() {
       <div className="py-20 bg-[#F8F9FA]">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Placeholder image */}
+            {/* Photo du garage */}
             <div className="relative">
-              {/* TODO: remplacer par une vraie photo du garage ou de l'équipe */}
-              <div className="rounded-2xl bg-[#1A1A2E] aspect-[4/3] flex items-center justify-center relative overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-[0.05]"
-                  style={{
-                    backgroundImage:
-                      "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
-                    backgroundSize: "20px 20px",
-                  }}
+              <div className="rounded-2xl overflow-hidden aspect-[4/3] relative">
+                <Image
+                  src="/images/1.png"
+                  alt="Garage 2F AUTO37 — Sainte-Maure-de-Touraine"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="relative text-center text-white/50 px-6">
-                  <Car size={48} strokeWidth={1} className="mx-auto mb-3 text-white/20" />
-                  <p className="font-body text-sm">Photo du garage / équipe</p>
-                  <p className="font-body text-xs text-white/30 mt-1">À remplacer par une photo réelle</p>
-                </div>
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-5 -right-5 bg-[#E94560] rounded-xl px-5 py-3 text-white shadow-lg hidden sm:block">

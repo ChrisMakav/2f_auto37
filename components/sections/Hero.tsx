@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PhoneCall, CalendarDays } from "lucide-react";
 
@@ -10,15 +11,17 @@ interface HeroProps {
 export function Hero({ headline, headlineAccent, subtext }: HeroProps) {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#1A1A2E]">
-      {/* Background pattern / texture */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
-          backgroundSize: "20px 20px",
-        }}
+      {/* Background image */}
+      <Image
+        src="/images/2.png"
+        alt=""
+        fill
+        className="object-cover"
+        priority
       />
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-[#1A1A2E]/70" />
 
       {/* Gradient overlay — right side glow */}
       <div
