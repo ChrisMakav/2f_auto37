@@ -1,26 +1,201 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ─── Brand Palette ─────────────────────────────────────── */
+  --color-brand:          #1A1A2E;
+  --color-brand-hover:    #141428;
+  --color-brand-light:    #252550;
+  --color-brand-ghost:    rgba(26, 26, 46, 0.06);
+
+  --color-action:         #E94560;
+  --color-action-hover:   #D03350;
+  --color-action-active:  #B5284A;
+  --color-action-ghost:   rgba(233, 69, 96, 0.08);
+  --color-action-muted:   rgba(233, 69, 96, 0.15);
+
+  --color-accent:         #F5A623;
+  --color-accent-hover:   #D98E16;
+  --color-accent-ghost:   rgba(245, 166, 35, 0.12);
+
+  /* ─── Neutrals ──────────────────────────────────────────── */
+  --color-carbon:         #0D0D0D;
+  --color-charcoal:       #1C1C1C;
+  --color-steel:          #2B2B2B;
+  --color-iron:           #484848;
+  --color-graphite:       #6B6B6B;
+  --color-silver:         #8C8C8C;
+  --color-smoke:          #C8C8C8;
+  --color-ash:            #F8F9FA;
+  --color-white:          #FFFFFF;
+
+  /* ─── Semantic ──────────────────────────────────────────── */
+  --color-text-primary:   #2D2D2D;
+  --color-text-secondary: #484848;
+  --color-text-muted:     #8C8C8C;
+  --color-text-inverse:   #FFFFFF;
+  --color-text-action:    #E94560;
+  --color-text-accent:    #F5A623;
+
+  --color-surface:        #FFFFFF;
+  --color-surface-raised: #F8F9FA;
+  --color-border:         #C8C8C8;
+  --color-border-strong:  #8C8C8C;
+
+  --color-success:        #16A34A;
+  --color-warning:        #D97706;
+  --color-error:          #DC2626;
+  --color-info:           #2563EB;
+
+  /* ─── Typography ─────────────────────────────────────────── */
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  --text-2xs: 0.6875rem;
+  --text-xs:  0.75rem;
+  --text-sm:  0.875rem;
+  --text-base: 1rem;
+  --text-lg:  1.125rem;
+  --text-xl:  1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  --leading-none:    1;
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   1.8;
+
+  --tracking-tighter: -0.05em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.1em;
+  --tracking-widest:   0.2em;
+
+  /* ─── Spacing (4px grid) ─────────────────────────────────── */
+  --spacing-px:  1px;
+  --spacing-0:   0;
+  --spacing-1:   0.25rem;
+  --spacing-2:   0.5rem;
+  --spacing-3:   0.75rem;
+  --spacing-4:   1rem;
+  --spacing-5:   1.25rem;
+  --spacing-6:   1.5rem;
+  --spacing-8:   2rem;
+  --spacing-10:  2.5rem;
+  --spacing-12:  3rem;
+  --spacing-14:  3.5rem;
+  --spacing-16:  4rem;
+  --spacing-20:  5rem;
+  --spacing-24:  6rem;
+  --spacing-28:  7rem;
+  --spacing-32:  8rem;
+
+  /* ─── Border Radius ─────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius:      6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* ─── Shadows ────────────────────────────────────────────── */
+  --shadow-sm:
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow:
+    0 4px 12px rgba(0, 0, 0, 0.10),
+    0 2px 4px  rgba(0, 0, 0, 0.06);
+  --shadow-md:
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    0 4px 8px  rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 16px 40px rgba(0, 0, 0, 0.14),
+    0 8px  16px rgba(0, 0, 0, 0.08);
+  --shadow-action:
+    0 4px 20px rgba(233, 69, 96, 0.35),
+    0 2px 8px  rgba(233, 69, 96, 0.20);
+  --shadow-dark:
+    0 4px 24px rgba(0, 0, 0, 0.40),
+    0 2px 8px  rgba(0, 0, 0, 0.25);
+
+  /* ─── Z-Index ────────────────────────────────────────────── */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* ─── Motion ─────────────────────────────────────────────── */
+  --duration-fast:    100ms;
+  --duration-normal:  200ms;
+  --duration-slow:    300ms;
+  --duration-slower:  500ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
+  --ease-sharp:   cubic-bezier(0.2, 0, 0, 1);
+
+  /* ─── Layout ─────────────────────────────────────────────── */
+  --container-xl:  1280px;
+  --navbar-utility-h: 2.5rem;
+  --navbar-main-h:    4.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base Styles ─────────────────────────────────────────── */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background: var(--color-surface);
+    line-height: 1.625;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-brand);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-brand);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-action);
+    outline-offset: 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100%); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
 }
