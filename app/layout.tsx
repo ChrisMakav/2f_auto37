@@ -3,6 +3,7 @@ import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ChatWidget } from "@/components/ChatWidget";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
@@ -114,6 +115,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
