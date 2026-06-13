@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-
-const ChatWidget = dynamic(
-  () => import("@/components/ChatWidget").then((m) => m.ChatWidget),
-  { ssr: false }
-);
+import { ChatWidgetLoader } from "@/components/ChatWidgetLoader";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
@@ -120,7 +115,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <ChatWidget />
+        <ChatWidgetLoader />
       </body>
     </html>
   );
