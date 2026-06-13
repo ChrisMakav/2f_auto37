@@ -30,42 +30,5 @@ export function ChatWidget() {
     });
   }, []);
 
-  return (
-    <style>{`
-      :root {
-        --chat--color-primary: #E94560;
-        --chat--color-primary-shade-50: #D03350;
-        --chat--color-primary-shade-100: #C02D47;
-        --chat--color-secondary: #1A1A2E;
-        --chat--color-secondary-shade-50: #141424;
-        --chat--color-white: #ffffff;
-        --chat--color-light: #F8F9FA;
-        --chat--color-light-shade-50: #E8E8E8;
-        --chat--color-medium: #8C8C8C;
-        --chat--color-dark: #1A1A2E;
-        --chat--color-disabled: #8C8C8C;
-        --chat--color-typing: #404040;
-
-        --chat--window--width: 380px;
-        --chat--window--height: 580px;
-
-        --chat--header--background: #1A1A2E;
-        --chat--header--color: #ffffff;
-
-        --chat--message--bot--background: #F8F9FA;
-        --chat--message--bot--color: #1A1A2E;
-        --chat--message--user--background: #E94560;
-        --chat--message--user--color: #ffffff;
-
-        --chat--toggle--background: #E94560;
-        --chat--toggle--hover--background: #D03350;
-        --chat--toggle--active--background: #C02D47;
-        --chat--toggle--color: #ffffff;
-        --chat--toggle--size: 60px;
-
-        --chat--border-radius: 12px;
-        --chat--textarea--height: 50px;
-      }
-    `}</style>
-  );
+  return null;
 }
