@@ -62,8 +62,7 @@ const CUSTOM_THEME = `
 export function ChatWidget() {
   useEffect(() => {
     createChat({
-      webhookUrl:
-        "https://n8n.srv1644260.hstgr.cloud/webhook/a4f8d702-58f9-4acd-8b7f-1ea8bebc6587/chat",
+      webhookUrl: "/api/chat",
       mode: "window",
       showWelcomeScreen: false,
       loadPreviousSession: false,
