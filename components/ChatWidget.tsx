@@ -59,6 +59,8 @@ const CUSTOM_THEME = `
   }
 `;
 
+const AUTO_OPEN_DELAY_MS = 30_000;
+
 export function ChatWidget() {
   useEffect(() => {
     createChat({
@@ -89,7 +91,26 @@ export function ChatWidget() {
     style.textContent = CUSTOM_THEME;
     document.head.appendChild(style);
 
+    // Auto-open the chat once, 30s after the widget mounts, unless the
+    // visitor has already interacted with the toggle button by then.
+    let userToggled = false;
+    const toggleButton = document.querySelector<HTMLElement>(
+      ".chat-window-toggle"
+    );
+    const markUserToggled = () => {
+      userToggled = true;
+    };
+    toggleButton?.addEventListener("click", markUserToggled);
+
+    const autoOpenTimer = window.setTimeout(() => {
+      if (!userToggled) {
+        toggleButton?.click();
+      }
+    }, AUTO_OPEN_DELAY_MS);
+
     return () => {
+      window.clearTimeout(autoOpenTimer);
+      toggleButton?.removeEventListener("click", markUserToggled);
       document.getElementById("n8n-chat-custom-theme")?.remove();
     };
   }, []);
