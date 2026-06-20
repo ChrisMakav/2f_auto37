@@ -90,11 +90,25 @@ export function ServiceCard({
   );
 
   if (href) {
+    const isExternal = href.startsWith("http");
+    const linkClassName =
+      "block rounded-2xl focus-visible:outline-2 focus-visible:outline-[#E94560] focus-visible:outline-offset-2";
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClassName}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
-      <Link
-        href={href}
-        className="block rounded-2xl focus-visible:outline-2 focus-visible:outline-[#E94560] focus-visible:outline-offset-2"
-      >
+      <Link href={href} className={linkClassName}>
         {content}
       </Link>
     );

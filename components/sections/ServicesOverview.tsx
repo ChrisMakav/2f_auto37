@@ -9,28 +9,28 @@ const services = [
     title: "Révision complète",
     description:
       "Vidange, filtres, bougies, contrôle des niveaux. Votre véhicule repart en pleine forme avec une révision complète aux normes constructeur.",
-    href: "/rendez-vous",
+    href: "https://n8n.srv1644260.hstgr.cloud/form/09040ec1-6a6c-47e4-8d53-ad8b6ecfe624",
   },
   {
     icon: AlertTriangle,
     title: "Freinage",
     description:
       "Remplacement de plaquettes, disques, tambours et liquide de frein. Votre sécurité est notre priorité absolue.",
-    href: "/rendez-vous",
+    href: "https://n8n.srv1644260.hstgr.cloud/form/09040ec1-6a6c-47e4-8d53-ad8b6ecfe624",
   },
   {
     icon: Zap,
     title: "Diagnostic électronique",
     description:
       "Lecture et effacement des codes défauts avec valise OBD professionnelle. Identification précise de chaque anomalie.",
-    href: "/rendez-vous",
+    href: "https://n8n.srv1644260.hstgr.cloud/form/09040ec1-6a6c-47e4-8d53-ad8b6ecfe624",
   },
   {
     icon: Wind,
     title: "Climatisation",
     description:
       "Recharge du gaz, vérification du circuit, désinfection de l'habitacle. Roulez au frais en toute sécurité.",
-    href: "/rendez-vous",
+    href: "https://n8n.srv1644260.hstgr.cloud/form/09040ec1-6a6c-47e4-8d53-ad8b6ecfe624",
   },
 ];
 
