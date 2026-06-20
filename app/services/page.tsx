@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { slugify } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Nos Services",
@@ -123,13 +124,14 @@ function ServiceCategory({ title, services }: CategoryProps) {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
-          <ServiceCard
-            key={s.title}
-            icon={s.icon}
-            title={s.title}
-            description={s.description}
-            href="https://n8n.srv1644260.hstgr.cloud/form/09040ec1-6a6c-47e4-8d53-ad8b6ecfe624"
-          />
+          <div key={s.title} id={slugify(s.title)} className="scroll-mt-28">
+            <ServiceCard
+              icon={s.icon}
+              title={s.title}
+              description={s.description}
+              href="https://n8n.srv1644260.hstgr.cloud/form/09040ec1-6a6c-47e4-8d53-ad8b6ecfe624"
+            />
+          </div>
         ))}
       </div>
     </div>

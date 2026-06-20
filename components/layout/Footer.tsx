@@ -27,11 +27,11 @@ const companyLinks = [
 ];
 
 const serviceLinks = [
-  { label: "Révision complète", href: "/services" },
-  { label: "Freinage", href: "/services" },
-  { label: "Diagnostic électronique", href: "/services" },
-  { label: "Climatisation", href: "/services" },
-  { label: "Géométrie / Parallélisme", href: "/services" },
+  { label: "Révision complète", href: "/services#revision-complete" },
+  { label: "Freinage", href: "/services#freinage" },
+  { label: "Diagnostic électronique", href: "/services#diagnostic-electronique" },
+  { label: "Climatisation", href: "/services#climatisation" },
+  { label: "Géométrie / Parallélisme", href: "/services#geometrie-parallelisme" },
 ];
 
 const hours = [
